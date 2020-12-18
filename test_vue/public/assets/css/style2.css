@@ -1,0 +1,133 @@
+    /* ---- GLOBAL STYLE ---- */
+
+    .vh-100-fix {
+        height: calc(100vh - calc(100vh - 100%));
+    }
+
+    .main-page {
+        padding-top: 52px;
+    }
+
+    .bg-grey {
+        background-color: #F2F5F7;
+    }
+
+    .bg-white {
+        background-color: white;
+    }
+
+    /* ---- GLOBAL TEXT RULES ---- */
+    
+    .f-bold {
+        font-weight: bold;
+    }
+
+    .f-semi {
+        font-weight: 600;
+    }
+
+    .f-regular {
+        font-weight: normal;
+    }
+
+    .f-12 {
+        font-size: 12px;
+    }
+
+    .f-13 {
+        font-size: 13px;
+    }
+
+    .f-14 {
+        font-size: 14px;
+    }
+
+    .f-16 {
+        font-size: 16px;
+    }
+
+    .f-12, .f-13, .f-14, .f-16 {
+        letter-spacing: -0.02em;
+    }
+
+    .f-cont {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .f-c-midgrey {
+        color: #6F7287;
+    }
+
+    /* ---- GLOBAL GAP ---- */
+
+    .m-t-12 {
+        margin-top: 12px;
+    }
+
+    .m-t-16 {
+        margin-top: 16px;
+    }
+
+    .m-t-24 {
+        margin-top: 24px;
+    }
+
+    .p-x-8 {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .p-x-20 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .p-y-20 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .section-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    /* ---- HEADER ---- */
+
+    .header-top {
+        border-bottom: 1px solid #EDEDED;
+        position: fixed;
+        width: 100%;
+    }
+
+    .header-top--inner {
+        height: 52px;
+    }
+
+    .w-limit {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header-item {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .header-item:hover {
+        background: black;
+    }
+
+    .header-top--left .header-item:first-child {
+        padding-left: 20px;
+        width: 44px;
+    }
+
+    .header-top--right .header-item:last-child {
+        padding-right: 20px;
+        width: 44px;
+    }

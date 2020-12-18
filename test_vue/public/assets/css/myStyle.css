@@ -1,0 +1,205 @@
+body{
+    font-family: 'Playfair Display';
+    font-size: 16px;
+    color: #000000;
+    font-weight: normal;
+
+}
+body, html {
+    height: 100%;
+    margin: 0px;
+}
+
+.w-limit {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+}
+
+.background-splash{
+    background-color: #FF5151;
+}
+
+.popition-text-splash{
+    padding-top: 296px;
+}
+
+.vh-100 {
+    min-height: 100vh;
+    height: auto !important;
+}
+
+.f-monstarat{
+    font-family: Montserrat;
+}
+
+
+/*<-- Font Weight --> */
+.fw-bold{
+    font-weight: bold;
+}
+
+/*<-- Font Size --> */
+
+.f-12{
+    font-size: 12px;
+}
+
+.f-14{
+    font-size: 14px;
+}
+
+.f-30{
+    font-size: 30px;
+}
+
+.f-32{
+    font-size: 32px;
+}
+
+.f-36{
+    font-size: 36px;
+}
+
+
+/*<-- Line-Height --> */
+
+.lh-48px{
+    line-height: 48px;
+}
+
+.lh-37{
+    line-height: 37px;
+}
+
+/*<-- Letter-Spacing --> */
+
+.lt-003{
+    letter-spacing: 0.03em;
+}
+
+/*<-- Color --> */
+
+.c-ffffff{
+    color: #ffffff;
+}
+
+.c-29291E{
+    color: #29291E;
+}
+
+.c-FF5151{
+    color: #FF5151;
+}
+
+/*<-- Margin --> */
+
+.m-r-15{
+    margin-right: 15px;
+}
+
+.m-l-15{
+    margin-left: 15px;
+}
+
+.m-t-5{
+    margin-top: 5px;
+}
+
+.m-t-10{
+    margin-top: 10px;
+}
+
+.m-t-15{
+    margin-top: 15px;
+}
+
+.m-t-16{
+    margin-top: 16px;
+}
+
+.m-t-20{
+    margin-top: 20px;
+}
+
+.m-t-30{
+    margin-top: 30px;
+}
+
+.m-t-50{
+    margin-top: 50px;
+}
+
+.m-t-177{
+    margin-top: 177px;
+}
+
+.m-b-8{
+    margin-bottom: 8px;
+}
+
+.m-b-10{
+    margin-bottom: 10px;
+}
+
+.m-b-16{
+    margin-bottom: 16px;
+}
+
+.m-b-20{
+    margin-bottom: 20px;
+}
+
+.m-b-50{
+    margin-bottom: 50px;
+}
+
+.mar-t-90{
+    margin-top: 90px;
+}
+
+/*<-- Padding --> */
+
+.p-r-15{
+    padding-right: 15px;
+}
+
+.p-l-15{
+    padding-left: 15px;
+}
+
+.p-t-50{
+    padding-top: 50px;
+}
+
+
+.text-align-end{
+    text-align-last: end;
+}
+
+
+.btn-primary-my{
+    color: #ffffff;
+    background-color: #FF5151;
+    border-color: #ffffff;
+}
+
+
+.flex-100 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex-100 .flex-1 {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
