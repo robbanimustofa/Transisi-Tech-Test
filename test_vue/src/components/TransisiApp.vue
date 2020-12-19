@@ -1,14 +1,14 @@
 <template >
     <div>
-        <Register/>
+        <!-- <Register/> -->
     </div>
 </template>
 <script>
-import Register from './Register/Register.vue';
+// import Register from './Register/Register.vue';
 export default {
     name: 'TransisiApp',
     components:{
-        Register
+        // Register
     }
 }
 </script>

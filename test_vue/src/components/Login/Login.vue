@@ -1,20 +1,10 @@
 <template>
-    <div class="vh-100 f-monstarat">
+        <div class="vh-100 f-monstarat">
         <main class="p-r-15 p-l-15">
             <div class="flex-100 w-limit">
                 <div class="flex-1">
-                    <div class="f-30 lh-37 fw-bold c-29291E p-t-50">Daftar</div>
+                    <div class="f-30 lh-37 fw-bold c-29291E p-t-50">Login</div>
                     <form action="" class="m-b-50">
-                        <!-- <div class="m-t-30">
-                            <label for="input_fullName" class="f-12">Nama Lengkap</label>
-                            <input type="text" class="form-control" id="input_fullName"
-                                   aria-describedby="emailHelp" placeholder="Gigih Pribadi">
-                        </div>
-                        <div class="m-t-10">
-                            <label for="inputNickName" class="f-12">Nama Panggilan</label>
-                            <input type="text" class="form-control" id="inputNickName"
-                                   placeholder="Gigih">
-                        </div> -->
                         <div class="m-t-10">
                             <label for="inputEmail" class="f-12">Email</label>
                             <input type="email" class="form-control" id="inputEmail"
@@ -27,36 +17,36 @@
                         </div>
                     </form>
                 </div>
-                <button type="button" class="btn btn-primary-my btn-lg btn-block m-b-20" @click="CreateRegister">Daftar</button>
-                <small @click="routeToLogin" class="m-b-20">Sudah punya akun? <span class="c-FF5151"><b>Masuk Sekarang</b></span></small>
+                <button type="button" class="btn btn-primary-my btn-lg btn-block m-b-20" @click="CreateLogin">Daftar</button>
+                <small @click="routeToRegister" class="m-b-20">Belum punya akun? <span class="c-FF5151"><b>Daftar Sekarang</b></span></small>
             </div>
         </main>
     </div>
 </template>
-
 <script>
-    export default {
-        name: "Register",
-        data(){
+export default {
+    name:'Login',
+    data(){
             return{
                 email:'',
                 password:'',
             }
         },
         methods:{
-            routeToLogin(){
-                this.$router.push('/loginuser')
+            routeToRegister(){
+                this.$router.push('/register')
             },
 
-            async CreateRegister(){
+            async CreateLogin(){
                 try{
-                    const dataRegister = new FormData();
-                    dataRegister.append('email', this.email);
-                    dataRegister.append('password', this.password);
+                    const dataLogin = new FormData();
+                    dataLogin.append('email', this.email);
+                    dataLogin.append('password', this.password);
                     const response = await this.$axios.post(this.$baseurl +
-                        'api/register', dataRegister)
+                        'api/register', dataLogin)
                         if (response.status === 200) {
                             alert('suksess')
+                            this.$router.push('/listuser')
                         }else{
                             alert('200 false')
                         }
@@ -72,9 +62,9 @@
                 }
             }
         }
-    }
-</script>
 
+}
+</script>
 <style scoped>
 
 </style>

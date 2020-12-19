@@ -1,16 +1,15 @@
 <template>
   <div id="app">
-    <TransisiApp/>
+    <router-view class="vh-100"/>
   </div>
 </template>
 
 <script>
-import TransisiApp from './components/TransisiApp.vue'
 
 export default {
   name: 'App',
   components: {
-    TransisiApp
+  
   }
 }
 </script>
