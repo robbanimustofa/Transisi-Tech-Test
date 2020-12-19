@@ -50,9 +50,10 @@
 
             async CreateRegister(){
                 try{
-                    const dataRegister = new FormData();
-                    dataRegister.append('email', this.email);
-                    dataRegister.append('password', this.password);
+                    const dataRegister = {
+                        email: this.email,
+                        password: this.password
+                    }
                     const response = await this.$axios.post(this.$baseurl +
                         'api/register', dataRegister)
                         if (response.status === 200) {

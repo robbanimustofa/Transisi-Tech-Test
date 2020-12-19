@@ -17,7 +17,7 @@
                         </div>
                     </form>
                 </div>
-                <button type="button" class="btn btn-primary-my btn-lg btn-block m-b-20" @click="CreateLogin">Daftar</button>
+                <button type="button" class="btn btn-primary-my btn-lg btn-block m-b-20" @click="CreateLogin">Login</button>
                 <small @click="routeToRegister" class="m-b-20">Belum punya akun? <span class="c-FF5151"><b>Daftar Sekarang</b></span></small>
             </div>
         </main>
@@ -39,11 +39,12 @@ export default {
 
             async CreateLogin(){
                 try{
-                    const dataLogin = new FormData();
-                    dataLogin.append('email', this.email);
-                    dataLogin.append('password', this.password);
+                    const dataLogin = {
+                        email: this.email,
+                        password: this.password
+                    }
                     const response = await this.$axios.post(this.$baseurl +
-                        'api/register', dataLogin)
+                        'api/login', dataLogin)
                         if (response.status === 200) {
                             alert('suksess')
                             this.$router.push('/listuser')
