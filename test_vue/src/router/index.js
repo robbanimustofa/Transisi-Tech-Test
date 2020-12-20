@@ -5,9 +5,8 @@ import VueRouter from "vue-router";
 import Login from "../components/Login/Login.vue";
 import Register from "../components/Register/Register.vue";
 import ListUser from "../components/List User/ListUser.vue";
+import CreateUser from "../components/New User/CreateUser.vue";
 // import Dashboard from "../components/Hajiku/Dashboard";
-// import ListHaji from "../components/Hajiku/Haji/ListHaji";
-// import PengertianHaji from "../components/Hajiku/Haji/PengertianHaji";
 Vue.use(VueRouter);
 const routes = [
   // {
@@ -40,15 +39,10 @@ const routes = [
   //     component:Dashboard,
   // },
 
-  // {
-  //     path: '/listhaji',
-  //     component: ListHaji
-  // },
-
-  // {
-  //     path: '/pengertianhaji',
-  //     component: PengertianHaji,
-  // }
+  {
+    path: "/createuser",
+    component: CreateUser,
+  },
 ];
 
 const router = new VueRouter({

@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import $ from 'jquery'
     export default {
         name: "Register",
         data(){
@@ -57,17 +58,53 @@
                     const response = await this.$axios.post(this.$baseurl +
                         'api/register', dataRegister)
                         if (response.status === 200) {
-                            alert('suksess')
+                        $('#alertS').show();
+                        $('#contentAlertS').html('Berhasil Login!');
+                        $('#alertS').removeClass("alert alert-success animated fadeOutUp display-none");
+                        $('#alertS').addClass("alert alert-success animated fadeInDown show-display");
+                        $('#closeS').show();
+                        setTimeout(() => {
+                            $('#alertS').removeClass("alert alert-success animated fadeInDown show-display");
+                            $('#alertS').addClass("alert alert-success animated fadeOutUp");
+                            setTimeout(() =>{
+                                $('#alertS').addClass("display-none")
+                            },2000)
+                        }, 4000)
+                        setTimeout(()=>{
+                            this.$router.push('/listuser')
+                        }, 5000)
                         }else{
-                            alert('200 false')
+                            // alert('200 false')
                         }
                 }catch(e){
                     if (!e.code) {
-                        alert('error')
+                        // alert('error')
                         if (e.response.status === 400) {
-                            alert('err 500')
+                        $('#alert').show();
+                        $('#contentAlert').html(e.response.data.error);
+                        $('#alert').removeClass("alert alert-danger animated fadeOutUp display-none");
+                        $('#alert').addClass("alert alert-danger animated fadeInDown show-display");
+                        $('#close').show();
+                        setTimeout(() => {
+                            $('#alert').removeClass("alert alert-danger animated fadeInDown show-display");
+                            $('#alert').addClass("alert alert-danger animated fadeOutUp");
+                            setTimeout(() =>{
+                                $('#alert').addClass("display-none")
+                            },2000)
+                        }, 30000)
                         }else if (e.response.status === 404) {
-                            alert('err 404')
+                        $('#alert').show();
+                        $('#contentAlert').html(e.response.data.error);
+                        $('#alert').removeClass("alert alert-success animated fadeOutUp display-none");
+                        $('#alert').addClass("alert alert-success animated fadeInDown show-display");
+                        $('#close').show();
+                        setTimeout(() => {
+                            $('#alert').removeClass("alert alert-success animated fadeInDown show-display");
+                            $('#alert').addClass("alert alert-success animated fadeOutUp");
+                            setTimeout(() =>{
+                                $('#alert').addClass("display-none")
+                            },2000)
+                        }, 30000)
                         }
                     }
                 }

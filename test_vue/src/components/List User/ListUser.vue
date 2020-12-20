@@ -5,7 +5,7 @@
             <div class="header-top--inner w-limit d-flex justify-content-between align-items-center">
                 <div class="header-top--left">
                     <div class="header-item">
-                        <!-- <img src="../../../assets/icons/back-blue.svg" alt="a"> -->
+                        <img src="../../assets/icons/back-blue.svg" alt="a">
                     </div>
                 </div>
                 <div class="header-top--middle f-cont f-16 f-bold">List User</div>
@@ -41,6 +41,10 @@
                 </div>
             </div>
         </div>
+
+        <div class="pointer">
+            <span><img src="../../assets/icons/plus-1.svg" alt="" @click="add"></span>
+        </div>
         
     </div>
 </template>
@@ -59,6 +63,9 @@ export default {
     },
 
     methods: {
+        add(){
+            this.$router.push('/createuser')
+        },
         async fetchList(){
             var page =2
             try{
