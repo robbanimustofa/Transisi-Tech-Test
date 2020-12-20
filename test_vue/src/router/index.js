@@ -6,6 +6,7 @@ import Login from "../components/Login/Login.vue";
 import Register from "../components/Register/Register.vue";
 import ListUser from "../components/List User/ListUser.vue";
 import CreateUser from "../components/New User/CreateUser.vue";
+import DetailUser from "../components/Detail User/DetailUser.vue";
 // import Dashboard from "../components/Hajiku/Dashboard";
 Vue.use(VueRouter);
 const routes = [
@@ -42,6 +43,12 @@ const routes = [
   {
     path: "/createuser",
     component: CreateUser,
+  },
+
+  {
+    name: "DetailUser",
+    path: "/detailuser/:iduser",
+    component: DetailUser,
   },
 ];
 
