@@ -3609,3 +3609,10 @@ mar-top-36{
     border-radius: 50%;
   }
 
+.background-splash{
+    background-color: #8eda84;
+}
+
+.popition-text-splash {
+    padding-top: 410px;
+}

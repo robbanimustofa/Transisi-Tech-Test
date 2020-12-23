@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-// import SplashScreen from "../components/Hajiku/SplashScreen";
-// import StartScreen from "../components/Hajiku/StartScreen";
+import StartScreen from "../components/Start Screen/StartScreen.vue";
 import Login from "../components/Login/Login.vue";
 import Register from "../components/Register/Register.vue";
 import ListUser from "../components/List User/ListUser.vue";
@@ -10,10 +9,10 @@ import DetailUser from "../components/Detail User/DetailUser.vue";
 import Dashboard from "../components/Dashboard/Dashboard.vue";
 Vue.use(VueRouter);
 const routes = [
-  // {
-  //     path: '/',
-  //     component: SplashScreen
-  // },
+  {
+    path: "/",
+    component: StartScreen,
+  },
 
   // {
   //   path: '/startscren',
